@@ -13,25 +13,11 @@ For details, refer to our paper [Symbolic Music Genre Transfer with CycleGAN](IE
 For some examples in paper, we uploaded them to our YouTube channel. 
 (https://www.youtube.com/channel/UCs-bI_NP7PrQaMV1AJ4A3HQ)
 
-For the datasets, we uploaded them to our Google drive.
+For the datasets, we uploaded them to our Google drive. 
 (https://drive.google.com/drive/folders/1LS_R0cKxGue7NMg2Nh9bvem6SQPu5Fja)
 
-<!--
-## Applications
-### Monet Paintings to Photos
-<img src="imgs/painting2photo.jpg" width="1000px"/>
-
-### Collection Style Transfer
-<img src="imgs/photo2painting.jpg" width="1000px"/>
-
-### Object Transfiguration
-<img src="imgs/objects.jpg" width="1000px"/>
-
-### Season Transfer
-<img src="imgs/season.jpg" width="1000px"/>
-
-### Photo Enhancement: iPhone photo to DSLR photo
-<img src="imgs/photo_enhancement.jpg" width="1000px"/>
+### Model Architecture
+<img src="imgs/model_architecture.pdf" width="1000px"/>
 
 -->
 
