@@ -2,7 +2,11 @@
 
 <br><br><br>
 -->
-# CycleGAN
+# Music Style Translation based on CycleGAN
+
+- Built a CycleGAN-based model to realize music style transfer between different musical domains.
+- Added extra discriminators to regularize generators to achieve clear style transfer and preserve original melody, which made our model learn more high-level features.
+- Trained several genre classifiers separately, and combined them with subjective judgement to have more convincing evaluations.
 
 Tensorflow implementation for learning an image-to-image translation **without** input-output pairs.
 The method is proposed by [Jun-Yan Zhu](https://people.eecs.berkeley.edu/~junyanz/) in 
