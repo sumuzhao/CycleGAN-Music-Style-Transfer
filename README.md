@@ -17,7 +17,7 @@ For the datasets, we uploaded them to our Google drive.
 (https://drive.google.com/drive/folders/1LS_R0cKxGue7NMg2Nh9bvem6SQPu5Fja)
 
 ### Model Architecture
-<img src="imgs/model_architecture.pdf" width="1000px"/>
+<img src="imgs/model_architecture.png" width="1000px"/>
 
 -->
 
@@ -25,14 +25,14 @@ For the datasets, we uploaded them to our Google drive.
 The results of this implementation:
 
 - Classic -> Jazz <br>
-<img src="imgs/C2J.png" width="1000px"/> 
+<img src="imgs/C2J.png" width="500px"/> 
 
 - Jazz -> Classic <br>
-<img src="imgs/J2C.png" width="1000px"/> 
+<img src="imgs/J2C.png" width="500px"/> 
 
 
 ## Prerequisites
-- tensorflow r1.1
+- tensorflow r1.2
 - numpy 1.11.0
 - scipy 0.17.0
 - pillow 3.3.0
