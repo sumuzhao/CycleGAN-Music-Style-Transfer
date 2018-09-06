@@ -19,7 +19,6 @@ For the datasets, we uploaded them to our Google drive.
 ### Model Architecture
 <img src="imgs/model_architecture.png" width="1000px"/>
 
--->
 
 ## Update Results
 The results of this implementation:
