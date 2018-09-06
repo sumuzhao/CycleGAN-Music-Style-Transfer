@@ -8,12 +8,13 @@
 - Added extra discriminators to regularize generators to achieve clear style transfer and preserve original melody, which made our model learn more high-level features.
 - Trained several genre classifiers separately, and combined them with subjective judgement to have more convincing evaluations.
 
-Tensorflow implementation for learning an image-to-image translation **without** input-output pairs.
-The method is proposed by [Jun-Yan Zhu](https://people.eecs.berkeley.edu/~junyanz/) in 
-[Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networkssee](https://arxiv.org/pdf/1703.10593.pdf). 
-For example in paper:
+For details, refer to our paper [Symbolic Music Genre Transfer with CycleGAN](IEEE 2018 30th International Conference on Tools with Artificial Intelligence (ICTAI)). 
 
-<img src="imgs/teaser.jpg" width="1000px"/>
+For some examples in paper, we uploaded them to our YouTube channel. 
+(https://www.youtube.com/channel/UCs-bI_NP7PrQaMV1AJ4A3HQ)
+
+For the datasets, we uploaded them to our Google drive.
+(https://drive.google.com/drive/folders/1LS_R0cKxGue7NMg2Nh9bvem6SQPu5Fja)
 
 <!--
 ## Applications
