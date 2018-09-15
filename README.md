@@ -24,11 +24,24 @@ For the generator and the discriminator, their architectures are following:
 <img src="imgs/Generator.png" width="800px"/>
 <img src="imgs/Discriminator.png" width="400px"/>
 
-For the style classifier, its architecture is following:
+## Genre Classfier
+Evaluation is an important part for experiments. But it’s really difficult to evaluate the performance of our model. So we combine a trained genre classifier and human subjective judgement to make a relatively convincing evaluation. 
+
+The genre classifier has the architecture like this. 
 
 <img src="imgs/Classifier.png" width="400px"/>
 
-All the network parameters can be found in our paper. 
+We trained our genre classifier on real data. 
+
+<img src="imgs/Picture3.png" width="400px"/>
+
+We can see it can achieve very high accuracy when classifying Jazz and Classic, or Classic and Pop. But the accuracy is relatively lower, which indicates that Jazz and Pop are similar and a bit hard to distinguish even for human, at least when only considering note pitches. 
+
+But our genre classifier aims to evaluate whether a domain transfer is successful. That is, the classifier needs to classify generated data instead of real data. We should make sure our genre classifier robust. So we add Gaussian noise with different _𝜎_𝐶_ to the inputs during testing. From table, we can conclude that our generator has generalization. 
+
+For transfer 𝐴→𝐵, genre classifier _𝐶_𝐴, 𝐵_ reports the probability _𝑃_𝐴__𝑥_ if source genre is 𝐴, and _𝑃_𝐵__𝑥_ if source genre is 𝐵. 
+A domain transfer 𝐴→𝐵 is successful if: _𝑃_𝐴___𝑥_𝐴__=_𝐶_𝐴, 𝐵___𝑥_𝐴__>0.5 AND _𝑃_𝐴____𝑥__𝐵__=_𝐶_𝐴, 𝐵____𝑥__𝐵__<0.5. 
+
 
 ## Datasets
 In this project, we use music of three different styles which are Classic, Jazz and Pop. 
