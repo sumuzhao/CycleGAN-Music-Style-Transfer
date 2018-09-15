@@ -30,6 +30,14 @@ For the style classifier, its architecture is following:
 
 All the network parameters can be found in our paper. 
 
+## Datasets
+In this project, we use music of three different styles which are Classic, Jazz and Pop. 
+Originally, we collected a lot of songs of different genres from various sources. And after preprocessing, we got our final training datasets like this. Note that, To avoid introducing a bias due to the imbalance of genres, we reduce the amount of samples in the larger dataset to match that of the smaller one. 
+
+
+## Training
+
+
 ## Update Results
 The results of this implementation:
 
