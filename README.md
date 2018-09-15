@@ -33,7 +33,7 @@ The genre classifier has the architecture like this.
 
 We trained our genre classifier on real data. 
 
-<img src="imgs/Picture3.png" width="400px"/>
+<img src="imgs/Picture3.png" width="1000px"/>
 
 We can see it can achieve very high accuracy when classifying Jazz and Classic, or Classic and Pop. But the accuracy is relatively lower, which indicates that Jazz and Pop are similar and a bit hard to distinguish even for human, at least when only considering note pitches. 
 
