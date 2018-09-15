@@ -14,7 +14,7 @@ For the datasets, we uploaded them to our Google drive.
 
 ### Model Architecture
 Our model looks like below. 
-<img src="imgs/model_architecture.png" width="1000px"/>
+<img src="imgs/k" width="1000px"/>
 
 
 ## Update Results
