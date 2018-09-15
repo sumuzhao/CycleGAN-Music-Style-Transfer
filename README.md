@@ -37,11 +37,15 @@ We trained our genre classifier on real data.
 
 We can see it can achieve very high accuracy when classifying Jazz and Classic, or Classic and Pop. But the accuracy is relatively lower, which indicates that Jazz and Pop are similar and a bit hard to distinguish even for human, at least when only considering note pitches. 
 
-But our genre classifier aims to evaluate whether a domain transfer is successful. That is, the classifier needs to classify generated data instead of real data. We should make sure our genre classifier robust. So we add Gaussian noise with different _𝜎_𝐶_ to the inputs during testing. From table, we can conclude that our generator has generalization. 
+But our genre classifier aims to evaluate whether a domain transfer is successful. That is, the classifier needs to classify generated data instead of real data. We should make sure our genre classifier robust. So we add Gaussian noise with different sigma values to the inputs during testing. From table, we can conclude that our generator has generalization. 
 
-For transfer 𝐴→𝐵, genre classifier _𝐶_𝐴, 𝐵_ reports the probability _𝑃_𝐴__𝑥_ if source genre is 𝐴, and _𝑃_𝐵__𝑥_ if source genre is 𝐵. 
-A domain transfer 𝐴→𝐵 is successful if: _𝑃_𝐴___𝑥_𝐴__=_𝐶_𝐴, 𝐵___𝑥_𝐴__>0.5 AND _𝑃_𝐴____𝑥__𝐵__=_𝐶_𝐴, 𝐵____𝑥__𝐵__<0.5. 
+For transfer A to B, genre classifier reports the PA (probability that the sample is classified as A) if source genre is A, and PB (probability that the sample is classified as B) if source genre is B. 
 
+<img src="imgs/Picture4.png" width="500px"/>
+
+To evaluate domain transfer, we define the strength in two opposite directions A to B to A and B to A to B. 
+
+<img src="imgs/Picture5.png" width="500px"/>
 
 ## Datasets
 In this project, we use music of three different styles which are Classic, Jazz and Pop. 
