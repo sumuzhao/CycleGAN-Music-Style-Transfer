@@ -1,5 +1,3 @@
-<br><br><br>
--->
 # Music Style Translation based on CycleGAN
 
 - Built a CycleGAN-based model to realize music style transfer between different musical domains.
