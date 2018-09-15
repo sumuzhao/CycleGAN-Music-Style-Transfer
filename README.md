@@ -15,7 +15,7 @@ For the datasets, we uploaded them to our Google drive.
 ### Model Architecture
 Our model generally follows the same structures as CycleGAN, which consists of two GANs arranged in a cyclic fashion and trained in unison. 
 
-<img src="imgs/Picture1.png" width="1000px"/>
+<img src="imgs/Picture1.png" width="700px"/>
 
 G denotes generators, D denotes discriminators, A and B are two domains. Blue and red arrows denote domain transfers in the two opposite directions, and black arrows point to the loss functions. M denotes a dataset containing music from multiple domains, e.g., M is composed of A and B. x, x hat and x tilde respectively denote a real data sample from source domain, the same data sample after being transferred to target domain and the same data sample after being transferred back to the source domain. 
 
@@ -64,13 +64,20 @@ Third, we omit velocity information. We fixed every note on velocity 100, result
 Last, we remove songs whose first beat does not start at time step 0 and time signature is not 4/4. We also filter songs which has time signature changes throughout the songs. 
 
 ## Training
-Basically, we want our model to learn more high-level features and avoid overfitting on spurious patterns. So we add Gaussian noise 𝑁_0, _𝜎_𝐷_2__ to both real and fake inputs of discriminators.
-We trained three different models. Base model without extra discriminators, partial model with extra discriminators where mixed dataset is data from A and B, full model with extra discriminators where mixed dataset is data from three domains.
-For each model on each domain pair, we tried 6 different _𝜎_𝐷_ resulting in 54 models. We picked the best models among them. 
+Basically, we want our model to learn more high-level features and avoid overfitting on spurious patterns. So we add Gaussian noise to both real and fake inputs of discriminators.
 
-<img src="imgs/Picture6.png" width="500px"/>
-<img src="imgs/Picture7.png" width="500px"/>
-<img src="imgs/Picture8.png" width="500px"/>
+We trained three different models. Base model without extra discriminators, partial model with extra discriminators where mixed dataset is data from A and B, full model with extra discriminators where mixed dataset is data from three domains.For each model on each domain pair, we tried 6 different sigma values, resulting in 54 models. We picked the best models among them. 
+
+<img src="imgs/Picture6.png" width="700px"/>
+
+Here we show an example of base model on Jazz vs. Classic. 
+The upper table shows the loss after 20 epochs. The lower table shows the genre transfer performance measured by our genre classifier. Obviously, the best model is when sigma value is 1. 
+
+<img src="imgs/Picture7.png" width="700px"/>
+
+So after training 54 models, we picked all the best models, then compare Base model, Partial model and full model for each domain pair. Here we show examples for Jazz vs. Classic. We can see that three models have generally similar strength. But after checking piano-roll pictures and listening to generated samples, we can say that full model produces best samples, i.e., clear genre transfer and preserving the original melody. 
+
+<img src="imgs/Picture8.png" width="700px"/>
 
 
 ## Update Results
