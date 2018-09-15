@@ -64,6 +64,13 @@ Third, we omit velocity information. We fixed every note on velocity 100, result
 Last, we remove songs whose first beat does not start at time step 0 and time signature is not 4/4. We also filter songs which has time signature changes throughout the songs. 
 
 ## Training
+Basically, we want our model to learn more high-level features and avoid overfitting on spurious patterns. So we add Gaussian noise 𝑁_0, _𝜎_𝐷_2__ to both real and fake inputs of discriminators.
+We trained three different models. Base model without extra discriminators, partial model with extra discriminators where mixed dataset is data from A and B, full model with extra discriminators where mixed dataset is data from three domains.
+For each model on each domain pair, we tried 6 different _𝜎_𝐷_ resulting in 54 models. We picked the best models among them. 
+
+<img src="imgs/Picture6.png" width="500px"/>
+<img src="imgs/Picture7.png" width="500px"/>
+<img src="imgs/Picture8.png" width="500px"/>
 
 
 ## Update Results
