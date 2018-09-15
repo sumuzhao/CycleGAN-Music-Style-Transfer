@@ -14,7 +14,15 @@ For the datasets, we uploaded them to our Google drive.
 
 ### Model Architecture
 Our model looks like below. 
-<img src="imgs/k" width="1000px"/>
+<img src="imgs/Picture1.png" width="1000px"/>
+
+For the generator and the discriminator, their architectures are following:
+<img src="imgs/Generator.png" width="500px"/>
+<img src="imgs/Discriminator.png" width="500px"/>
+
+For the style classifier, its architecture is following:
+<img src="imgs/Classifier.png" width="500px"/>
+
 
 
 ## Update Results
