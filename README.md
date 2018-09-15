@@ -1,5 +1,3 @@
-<!-- <img src='imgs/horse2zebra.gif' align="right" width=384> 
-
 <br><br><br>
 -->
 # Music Style Translation based on CycleGAN
@@ -17,6 +15,7 @@ For the datasets, we uploaded them to our Google drive.
 (https://drive.google.com/drive/folders/1LS_R0cKxGue7NMg2Nh9bvem6SQPu5Fja)
 
 ### Model Architecture
+Our model looks like below. 
 <img src="imgs/model_architecture.png" width="1000px"/>
 
 
