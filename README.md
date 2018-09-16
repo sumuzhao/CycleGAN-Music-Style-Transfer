@@ -79,6 +79,11 @@ So after training 54 models, we picked all the best models, then compare Base mo
 
 <img src="imgs/Picture8.png" width="700px"/>
 
+- Train a model:
+```bash\
+python main.py --datasetA=
+```bash
+
 
 ## Update Results
 The results of this implementation:
