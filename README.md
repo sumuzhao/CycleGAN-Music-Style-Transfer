@@ -80,7 +80,10 @@ So after training 54 models, we picked all the best models, then compare Base mo
 <img src="imgs/Picture8.png" width="700px"/>
 
 - Train a model:
-```bash\ python main.py --dataset_A_dir=JC_J --dataset_B_dir=JC_C --model=base --sigma_d=0 ```\
+```bash
+python main.py --dataset_A_dir='JC_J' --dataset_B_dir='JC_C' --model='base' --sigma_d=0 \
+```
+
 
 ## Update Results
 The results of this implementation:
