@@ -79,11 +79,17 @@ So after training 54 models, we picked all the best models, then compare Base mo
 
 <img src="imgs/Picture8.png" width="700px"/>
 
-- Train a model:
+- Train a CycleGAN model:
 ```bash
-python main.py --dataset_A_dir='JC_J' --dataset_B_dir='JC_C' --model='base' --sigma_d=0 \
+python main.py --dataset_A_dir='JC_J' --dataset_B_dir='JC_C'  --type='cyclegan' --model='base' --sigma_d=0 --phase='train'
 ```
+There are three options for model, 'base', 'partial', 'full'. And different values can be set for sigma. 
 
+- Test a CycleGAN model:
+```bash
+python main.py --dataset_A_dir='JC_J' --dataset_B_dir='JC_C'  --type='cyclegan' --model='base' --sigma_d=0 --phase='test' --which_direction='AtoB'
+```
+You can choose 'AtoB' and 'BtoA' in which_direction. And the testing phase generates MIDI files and npy files for the origin, transfer and cycle pieces for each single phrase. 
 
 ## Update Results
 The results of this implementation:
