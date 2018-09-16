@@ -63,7 +63,7 @@ Third, we omit velocity information. We fixed every note on velocity 100, result
 
 Last, we remove songs whose first beat does not start at time step 0 and time signature is not 4/4. We also filter songs which has time signature changes throughout the songs. 
 
-## Training
+## Training and testing
 Basically, we want our model to learn more high-level features and avoid overfitting on spurious patterns. So we add Gaussian noise to both real and fake inputs of discriminators.
 
 We trained three different models. Base model without extra discriminators, partial model with extra discriminators where mixed dataset is data from A and B, full model with extra discriminators where mixed dataset is data from three domains.For each model on each domain pair, we tried 6 different sigma values, resulting in 54 models. We picked the best models among them. 
@@ -98,7 +98,7 @@ python main.py --dataset_A_dir='JC_J' --dataset_B_dir='JC_C' --type='classifier'
 
 - Test the trained CycleGAN model using the trained genre classifier:
 ```bash
-python main.py --dataset_A_dir='JC_J' --dataset_B_dir='JC_C' --type='cyclegan' --model='base' --sigma_c=0 --phase='test' --which_direction='AtoB'
+python main.py --dataset_A_dir='JC_J' --dataset_B_dir='JC_C' --type='cyclegan' --model='base' --sigma_c=0 --sigma_d=0 --phase='test' --which_direction='AtoB'
 ```
 This will generate new sample MIDI files attached with probability and a ranking text file for each direction. 
 In the ranking file, columns are 'Id  Content_diff  P_O - P_T  Prob_Origin  Prob_Transfer  Prob_Cycle'. Each row denotes a sample phrase. We sorted the samples based on the difference of origin and transfer probabilities ('P_O - P_T') in a descending order. The higher 'P_O - P_T' is, the more successful genre transfer is. 
