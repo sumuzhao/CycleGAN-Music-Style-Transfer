@@ -21,19 +21,19 @@ G denotes generators, D denotes discriminators, A and B are two domains. Blue an
 
 For the generator and the discriminator, their architectures are following:
 
-<img src="imgs/Generator.png" width="800px"/>
-<img src="imgs/Discriminator.png" width="400px"/>
+<img src="imgs/Generator.png" width="600px"/>
+<img src="imgs/Discriminator.png" width="300px"/>
 
 ## Genre Classfier
 Evaluation is an important part for experiments. But it’s really difficult to evaluate the performance of our model. So we combine a trained genre classifier and human subjective judgement to make a relatively convincing evaluation. 
 
 The genre classifier has the architecture like this. 
 
-<img src="imgs/Classifier.png" width="400px"/>
+<img src="imgs/Classifier.png" width="300px"/>
 
 We trained our genre classifier on real data. 
 
-<img src="imgs/Picture3.png" width="1000px"/>
+<img src="imgs/Picture3.png" width="8000px"/>
 
 We can see it can achieve very high accuracy when classifying Jazz and Classic, or Classic and Pop. But the accuracy is relatively lower, which indicates that Jazz and Pop are similar and a bit hard to distinguish even for human, at least when only considering note pitches. 
 
@@ -68,16 +68,16 @@ Basically, we want our model to learn more high-level features and avoid overfit
 
 We trained three different models. Base model without extra discriminators, partial model with extra discriminators where mixed dataset is data from A and B, full model with extra discriminators where mixed dataset is data from three domains.For each model on each domain pair, we tried 6 different sigma values, resulting in 54 models. We picked the best models among them. 
 
-<img src="imgs/Picture6.png" width="700px"/>
+<img src="imgs/Picture6.png" width="600px"/>
 
 Here we show an example of base model on Jazz vs. Classic. 
 The upper table shows the loss after 20 epochs. The lower table shows the genre transfer performance measured by our genre classifier. Obviously, the best model is when sigma value is 1. 
 
-<img src="imgs/Picture7.png" width="700px"/>
+<img src="imgs/Picture7.png" width="600px"/>
 
 So after training 54 models, we picked all the best models, then compare Base model, Partial model and full model for each domain pair. Here we show examples for Jazz vs. Classic. We can see that three models have generally similar strength. But after checking piano-roll pictures and listening to generated samples, we can say that full model produces best samples, i.e., clear genre transfer and preserving the original melody. 
 
-<img src="imgs/Picture8.png" width="700px"/>
+<img src="imgs/Picture8.png" width="600px"/>
 
 - Train a CycleGAN model:
 ```bash
@@ -105,9 +105,10 @@ In the ranking file, columns are 'Id  Content_diff  P_O - P_T  Prob_Origin  Prob
 
 ## Update Results
 The results of this implementation:
+Each row represents 4 phrases, i.e. 16 bars. The first row is the origin sample MIDI of source domain, followed by transferred samples in target domain by base model, partial model and full model. 
 
 - Classic -> Jazz <br>
-<img src="imgs/C2J.png" width="500px"/> 
+<img src="imgs/C2J.png" width="600px"/> 
 
 - Jazz -> Classic <br>
-<img src="imgs/J2C.png" width="500px"/> 
+<img src="imgs/J2C.png" width="600px"/> 
