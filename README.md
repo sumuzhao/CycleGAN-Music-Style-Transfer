@@ -1,18 +1,25 @@
-# Music Style Translation based on CycleGAN
+# Symbolic Music Genre Transfer with CycleGAN
 
 - Built a CycleGAN-based model to realize music style transfer between different musical domains.
 - Added extra discriminators to regularize generators to achieve clear style transfer and preserve original melody, which made our model learn more high-level features.
 - Trained several genre classifiers separately, and combined them with subjective judgement to have more convincing evaluations.
 
-For details, refer to our paper [Symbolic Music Genre Transfer with CycleGAN](IEEE 2018 30th International Conference on Tools with Artificial Intelligence (ICTAI)). 
+## Paper
 
-For some examples in paper, we uploaded them to our YouTube channel. 
-(https://www.youtube.com/channel/UCs-bI_NP7PrQaMV1AJ4A3HQ)
 
-For the datasets, we uploaded them to our Google drive. 
-(https://drive.google.com/drive/folders/1LS_R0cKxGue7NMg2Nh9bvem6SQPu5Fja)
+[Symbolic Music Genre Transfer with CycleGAN](https://www.tik.ee.ethz.ch/file/3c9fa6488ef90e586fee9b9613dd6791/cyclegan-music-style%20(6).pdf)
 
-### Model Architecture
+Paper accepted at 30th International Conference on Tools with Artificial Intelligence (ICTAI), Volos, Greece, November 2018.
+
+## Music Samples
+
+www.youtube.com/channel/UCs-bI_NP7PrQaMV1AJ4A3HQ
+
+## Dataset
+
+All the data we used to generate the audio samples on Youtube and for the evaluation in the paper can be downloaded here https://goo.gl/ZK8wLW
+
+## Model Architecture
 Our model generally follows the same structures as CycleGAN, which consists of two GANs arranged in a cyclic fashion and trained in unison. 
 
 <img src="imgs/Picture1.png" width="700px"/>
