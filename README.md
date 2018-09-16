@@ -7,7 +7,7 @@
 ## Paper
 
 
-[Symbolic Music Genre Transfer with CycleGAN](https://www.tik.ee.ethz.ch/file/3c9fa6488ef90e586fee9b9613dd6791/cyclegan-music-style%20(6).pdf)
+[Symbolic Music Genre Transfer with CycleGAN](https://www.tik.ee.ethz.ch/file/78b3f68057381b1452083773e3219e0e/cyclegan-music-style%20(2).pdf)
 
 Paper accepted at 30th International Conference on Tools with Artificial Intelligence (ICTAI), Volos, Greece, November 2018.
 
