@@ -70,6 +70,14 @@ Third, we omit velocity information. We fixed every note on velocity 100, result
 
 Last, we remove songs whose first beat does not start at time step 0 and time signature is not 4/4. We also filter songs which has time signature changes throughout the songs. 
 
+## Versions
+
+Some important packages.
+--Python 3.5.4
+--Tensorflow 1.4.0
+--numpy 1.14.2
+--pretty_midi 0.2.8
+
 ## Training and testing
 Basically, we want our model to learn more high-level features and avoid overfitting on spurious patterns. So we add Gaussian noise to both real and fake inputs of discriminators.
 
