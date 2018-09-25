@@ -191,7 +191,10 @@ class cyclegan(object):
         self.lr = tf.placeholder(tf.float32, None, name='learning_rate')
 
         # Discriminator and Generator Optimizer
-        self.d_optim = tf.train.AdamOptimizer(self.lr, beta1=args.beta1).minimize(self.D_loss, var_list=self.d_vars)
+        if self.model == 'base':
+            self.d_optim = tf.train.AdamOptimizer(self.lr, beta1=args.beta1).minimize(self.d_loss, var_list=self.d_vars)
+        else:
+            self.d_optim = tf.train.AdamOptimizer(self.lr, beta1=args.beta1).minimize(self.D_loss, var_list=self.d_vars)
         self.g_optim = tf.train.AdamOptimizer(self.lr, beta1=args.beta1).minimize(self.g_loss, var_list=self.g_vars)
 
         init_op = tf.global_variables_initializer()
