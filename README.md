@@ -78,6 +78,10 @@ Some important packages.
 - numpy 1.14.2
 - pretty_midi 0.2.8
 
+And pay attention to the line below in main.py, model.py and style_classifier.py.
+"os.environ["CUDA_VISIBLE_DEVICES"] = os.environ['SGE_GPU']". 
+You might need to change it as the default settings when you use the GPU in your local PC or laptop. 
+
 ## Training and testing
 Basically, we want our model to learn more high-level features and avoid overfitting on spurious patterns. So we add Gaussian noise to both real and fake inputs of discriminators.
 
