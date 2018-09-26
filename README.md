@@ -70,6 +70,11 @@ Third, we omit velocity information. We fixed every note on velocity 100, result
 
 Last, we remove songs whose first beat does not start at time step 0 and time signature is not 4/4. We also filter songs which has time signature changes throughout the songs. 
 
+So, the single phrase in numpy array has the format [time step, pitch range, output channel], which is [64, 84, 1].
+The numpy array file in the google drive, e.g. classic_train_piano.npy, jazz_test_piano.npy, has the format [number of phrases, time step, pitch range, output channel]. When you want to train the CycleGAN model, please divide these numpy array into single phrase in the format [1, time step, pitch range, output channel] which is [1, 64, 84, 1]. And name them after "genre_piano_mode_number" in the ascending order. For example, the names are like "classic_piano_train_123.npy", "pop_piano_test_76.npy", etc. 
+
+For those who want to use their own datasets, please take a look at Testfile.py. There are some preprocessing steps though they are a bit messy. We'll update them time permitting. 
+
 ## Versions
 
 Some important packages.
