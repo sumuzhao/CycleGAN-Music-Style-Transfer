@@ -82,6 +82,7 @@ Some important packages.
 - Tensorflow 1.4.0
 - numpy 1.14.2
 - pretty_midi 0.2.8
+- pypianoroll 0.1.3
 
 And pay attention to the line below in main.py, model.py and style_classifier.py.
 "os.environ["CUDA_VISIBLE_DEVICES"] = os.environ['SGE_GPU']". 
