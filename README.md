@@ -15,11 +15,8 @@ Paper accepted at 30th International Conference on Tools with Artificial Intelli
 
 www.youtube.com/channel/UCs-bI_NP7PrQaMV1AJ4A3HQ
 
-## Dataset
-
-All the data we used to generate the audio samples on Youtube and for the evaluation in the paper can be downloaded here https://goo.gl/ZK8wLW
-
 ## Model Architecture
+
 Our model generally follows the same structures as CycleGAN, which consists of two GANs arranged in a cyclic fashion and trained in unison. 
 
 <img src="imgs/Picture1.png" width="700px"/>
@@ -32,6 +29,7 @@ For the generator and the discriminator, their architectures are following:
 <img src="imgs/Discriminator.png" width="300px"/>
 
 ## Genre Classfier
+
 Evaluation is an important part for experiments. But it’s really difficult to evaluate the performance of our model. So we combine a trained genre classifier and human subjective judgement to make a relatively convincing evaluation. 
 
 The genre classifier has the architecture like this. 
@@ -55,6 +53,9 @@ To evaluate domain transfer, we define the strength in two opposite directions A
 <img src="imgs/Picture5.png" width="500px"/>
 
 ## Datasets
+
+All the data we used to generate the audio samples on Youtube and for the evaluation in the paper can be downloaded here https://goo.gl/ZK8wLW
+
 In this project, we use music of three different styles which are Classic, Jazz and Pop. 
 Originally, we collected a lot of songs of different genres from various sources. And after preprocessing, we got our final training datasets like this. Note that, To avoid introducing a bias due to the imbalance of genres, we reduce the amount of samples in the larger dataset to match that of the smaller one. 
 
@@ -91,6 +92,7 @@ And pay attention to the line below in main.py, model.py and style_classifier.py
 You might need to change it as the default settings when you use the GPU in your local PC or laptop. 
 
 ## Training and testing
+
 Basically, we want our model to learn more high-level features and avoid overfitting on spurious patterns. So we add Gaussian noise to both real and fake inputs of discriminators.
 
 We trained three different models. Base model without extra discriminators, partial model with extra discriminators where mixed dataset is data from A and B, full model with extra discriminators where mixed dataset is data from three domains.For each model on each domain pair, we tried 6 different sigma values, resulting in 54 models. We picked the best models among them. 
@@ -131,6 +133,7 @@ This will generate new sample MIDI files attached with probability and a ranking
 In the ranking file, columns are 'Id  Content_diff  P_O - P_T  Prob_Origin  Prob_Transfer  Prob_Cycle'. Each row denotes a sample phrase. We sorted the samples based on the difference of origin and transfer probabilities ('P_O - P_T') in a descending order. The higher 'P_O - P_T' is, the more successful genre transfer is. 
 
 ## Update Results
+
 The results of this implementation:
 Each row represents 4 phrases, i.e. 16 bars. The first row is the origin sample MIDI of source domain, followed by transferred samples in target domain by base model, partial model and full model. 
 
