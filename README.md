@@ -127,7 +127,7 @@ python main.py --dataset_A_dir='JC_J' --dataset_B_dir='JC_C' --type='classifier'
 
 - Test the trained CycleGAN model using the trained genre classifier:
 ```bash
-python main.py --dataset_A_dir='JC_J' --dataset_B_dir='JC_C' --type='cyclegan' --model='base' --sigma_c=0 --sigma_d=0 --phase='test' --which_direction='AtoB'
+python main.py --dataset_A_dir='JC_J' --dataset_B_dir='JC_C' --type='classifier' --model='base' --sigma_c=0 --sigma_d=0 --phase='test' --which_direction='AtoB'
 ```
 This will generate new sample MIDI files attached with probability and a ranking text file for each direction. 
 In the ranking file, columns are 'Id  Content_diff  P_O - P_T  Prob_Origin  Prob_Transfer  Prob_Cycle'. Each row denotes a sample phrase. We sorted the samples based on the difference of origin and transfer probabilities ('P_O - P_T') in a descending order. The higher 'P_O - P_T' is, the more successful genre transfer is. 
