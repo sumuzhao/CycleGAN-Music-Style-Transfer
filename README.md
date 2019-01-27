@@ -56,6 +56,8 @@ To evaluate domain transfer, we define the strength in two opposite directions A
 
 All the data we used to generate the audio samples on Youtube and for the evaluation in the paper can be downloaded here https://goo.gl/ZK8wLW
 
+You can use the data set in https://drive.google.com/file/d/1zyN4IEM8LbDHIMSwoiwB6wRSgFyz7MEH/view?usp=sharing, which can be used directly. They are the same as the dataset above. 
+
 In this project, we use music of three different styles which are Classic, Jazz and Pop. 
 Originally, we collected a lot of songs of different genres from various sources. And after preprocessing, we got our final training datasets like this. Note that, To avoid introducing a bias due to the imbalance of genres, we reduce the amount of samples in the larger dataset to match that of the smaller one. 
 
