@@ -4,6 +4,8 @@
 - Added extra discriminators to regularize generators to achieve clear style transfer and preserve original melody, which made our model learn more high-level features.
 - Trained several genre classifiers separately, and combined them with subjective judgement to have more convincing evaluations.
 
+**Note**: Recently I'm trying to refactorize this project in TensorFlow2.0. For those interested please go to [CycleGAN-Music-Style-Transfer-Refactorization](https://github.com/sumuzhao/CycleGAN-Music-Style-Transfer-Refactorization). 
+
 ## Paper
 
 
