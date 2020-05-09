@@ -1,0 +1,8 @@
+tensorflow-gpu
+tensorflow
+numpy
+scipy
+pillow
+imageio
+pretty_midi
+pypianoroll
