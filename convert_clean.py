@@ -101,11 +101,11 @@ def converter(filepath):
     dataset directory and update MIDI information to `midi_dict`"""
     try:
         midi_name = os.path.splitext(os.path.basename(filepath))[0]
-        multitrack = Multitrack(beat_resolution=24, name=midi_name)
+        multitrack = Multitrack(resolution=24, name=midi_name)
 
         pm = pretty_midi.PrettyMIDI(filepath)
         midi_info = get_midi_info(pm)
-        multitrack.parse_pretty_midi(pm)
+        multitrack = pypianoroll.from_pretty_midi(pm)
         merged = get_merged(multitrack)
 
         make_sure_path_exists(converter_path)
